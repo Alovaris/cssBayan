@@ -129,7 +129,9 @@ h1 {
   margin-top: 1em;
   font-size: 2em;
 }
-
+.mobile-img {
+  display: none;
+}
 .container {
   max-width: 55%;
   margin: 0 auto;
@@ -153,10 +155,10 @@ h1 {
 }
 
 .img__bayan-item {
+  margin: 0.5em 0.5em;
   height: 0;
   opacity: 0;
   transition: opacity 0.7s ease-in;
-
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -173,20 +175,33 @@ h1 {
   opacity: 1;
 }
 
-
 /* HOVER */
 
-.container:hover .bayan-item{
-    color: black;
-    transition: color 0.5s;
+.container:hover .bayan-item {
+  color: black;
+  transition: color 0.5s;
 }
 
 .bayan-item input:hover ~ .img__bayan-item {
-    height: 100%;
-    opacity: 1;
+  height: 100%;
+  opacity: 1;
 }
-.img__bayan-item:hover{
-    height: auto;
-    opacity: 1;
+.img__bayan-item:hover {
+  height: auto;
+  opacity: 1;
 }
+
+
+@media screen and (max-width: 321px) {
+  .bayan-item {
+    font-size: 0.6em;
+  }
+  .dekstop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+}
+
 
